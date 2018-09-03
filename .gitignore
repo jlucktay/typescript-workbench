@@ -69,3 +69,7 @@ typings/
 .history
 
 # End of https://www.gitignore.io/api/node,visualstudiocode
+
+*.js
+*.d.ts
+node_modules
