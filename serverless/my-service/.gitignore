@@ -35,3 +35,6 @@ node_modules
 # OS
 .DS_Store
 .tmp
+
+# Keep JS for now, until we convert to TS
+!*.js
