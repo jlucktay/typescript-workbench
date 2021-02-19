@@ -1,0 +1,28 @@
+{
+  "name": "hello-yarn",
+  "version": "0.1.0",
+  "description": "How to Build a Todo App with React, TypeScript, NodeJS, and MongoDB",
+  "main": "app.js",
+  "repository": "https://github.com/jlucktay/typescript-workbench/tree/main/hello-yarn",
+  "author": "James Lucktaylor",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "start": "concurrently \"tsc -w\" \"nodemon dist/js/app.js\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.17",
+    "typescript": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.11",
+    "@types/mongoose": "^5.10.3",
+    "@types/node": "^14.14.31",
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7"
+  }
+}
