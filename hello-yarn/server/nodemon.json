@@ -1,6 +1,7 @@
 {
   "env": {
-    "MONGO_DB": "your-db-name",
+    "MONGO_DB": "hello_yarn",
+    "MONGO_HOST": "localhost",
     "MONGO_PASSWORD": "your-password",
     "MONGO_USER": "your-username"
   }
