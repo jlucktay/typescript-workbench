@@ -22,7 +22,7 @@
   "repository": "https://github.com/jlucktay/typescript-workbench/tree/main/hello-yarn/server",
   "scripts": {
     "build": "tsc",
-    "start": "concurrently \"tsc -w\" \"nodemon dist/js/app.js\""
+    "start": "concurrently \"tsc --watch\" \"nodemon dist/js/app.js\""
   },
   "version": "0.1.0"
 }
