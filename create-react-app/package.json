@@ -15,6 +15,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@testing-library/dom": ">=7.21.4",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
@@ -25,11 +26,103 @@
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^4.0.0",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.0.1",
+    "jest": "^26.4.2",
+    "prettier": "2.1.1",
+    "ts-jest": "^26.3.0"
+  },
   "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true,
+      "jest/globals": true,
+      "node": true
+    },
     "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:jest/recommended",
+      "plugin:jest/style",
+      "prettier",
+      "prettier/@typescript-eslint",
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "shared-config"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.ts?(x)"
+        ],
+        "rules": {
+          "additional-typescript-only-rule": "warn"
+        }
+      }
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "jest"
+    ],
+    "root": true,
+    "rules": {
+      "@typescript-eslint/adjacent-overload-signatures": "error",
+      "@typescript-eslint/no-empty-function": "error",
+      "@typescript-eslint/no-empty-interface": "warn",
+      "@typescript-eslint/no-namespace": "error",
+      "@typescript-eslint/prefer-for-of": "warn",
+      "@typescript-eslint/triple-slash-reference": "error",
+      "@typescript-eslint/unified-signatures": "warn",
+      "additional-rule": "warn",
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "constructor-super": "error",
+      "eqeqeq": [
+        "warn",
+        "always"
+      ],
+      "jest/no-disabled-tests": "warn",
+      "jest/no-focused-tests": "error",
+      "jest/no-identical-title": "error",
+      "jest/prefer-to-have-length": "warn",
+      "jest/valid-expect": "error",
+      "no-cond-assign": "error",
+      "no-duplicate-case": "error",
+      "no-duplicate-imports": "error",
+      "no-empty": [
+        "error",
+        {
+          "allowEmptyCatch": true
+        }
+      ],
+      "no-invalid-this": "error",
+      "no-new-wrappers": "error",
+      "no-redeclare": "error",
+      "no-sequences": "error",
+      "no-shadow": [
+        "error",
+        {
+          "hoist": "all"
+        }
+      ],
+      "no-throw-literal": "error",
+      "no-unsafe-finally": "error",
+      "no-unused-labels": "error",
+      "no-var": "warn",
+      "no-void": "error",
+      "prefer-const": "warn"
+    }
   },
   "name": "create-react-app",
   "private": true,
