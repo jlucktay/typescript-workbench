@@ -2,7 +2,8 @@
   "name": "google-cloud",
   "packageManager": "yarn@4.0.2",
   "dependencies": {
-    "@google-cloud/resource-manager": "^5.0.1"
+    "@google-cloud/resource-manager": "^5.0.1",
+    "@types/gapi": "^0.0.47"
   },
   "license": "MIT"
 }
